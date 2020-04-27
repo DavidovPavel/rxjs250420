@@ -12,7 +12,7 @@ const endTouch$ = getX(
 
 export function getX(
     source1$: Observable<TouchEvent>,
-    source2$: Observable<MouseEvent>,
+    source2$: Observable<MouseEvent | TouchEvent>,
 ) {
     return merge(source1$, source2$)
         .pipe(
